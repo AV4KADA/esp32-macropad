@@ -134,33 +134,13 @@ flowchart LR
 
 ## 🚀 Быстрый старт
 
-### 1. Прошивка
+1. Зажмите **клавишу 1** и включите питание → LED горит ровно = режим настройки
+2. Запустите конфигуратор → выберите COM-порт → **Подключить**
+3. Настройте клавиши, яркость, таймер сна
+4. **«Записать в память»** — устройство сохранится и перезагрузится
+5. Подключите **«ESP32 MacroPad»** в настройках Bluetooth — готово 🎉
 
-**Нужно:** Arduino IDE 2.x, пакет плат **esp32 by Espressif ≥ 3.0** (важно для C3 и GPIO-wakeup API).
-
-Библиотеки:
-- [`ESP32-BLE-Keyboard`](https://github.com/T-vK/ESP32-BLE-Keyboard) *(рекомендуется NimBLE-вариант — экономит RAM/Flash)*
-- [`ArduinoJson`](https://arduinojson.org/) v6
-
-Настройки платы: `ESP32C3 Dev Module`, **USB CDC On Boot: Enabled** (чтобы Serial работал через USB).
-
-### 2. Конфигуратор
-
-```bash
-git clone https://github.com/<username>/esp32-macropad.git
-cd esp32-macropad/configurator
-pip install customtkinter pyserial
-python Configurator.py
-```
-
-### 3. Первая настройка
-
-1. Зажмите **клавишу 1** и включите питание → LED горит ровно, устройство в режиме настройки
-2. В конфигураторе выберите COM-порт → **Подключить** (конфиг считается автоматически)
-3. Настройте клавиши, яркость и таймер сна
-4. Нажмите **«Записать в память»** — устройство сохранится и перезагрузится
-5. Подключите **«ESP32 MacroPad»** в настройках Bluetooth вашей ОС — готово 🎉
-
+Готовые файлы лежат в [Releases](https://github.com/AV4KADA/esp32-macropad/releases)
 ---
 
 ## 🔌 Протокол обмена (JSON over UART, 115200)
